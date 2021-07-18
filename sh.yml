@@ -5,7 +5,7 @@
     - paloaltonetworks.panos
   tasks:
     - name: execute
-      panos_op:
+      paloaltonetworks.panos.panos_op:
          cmd: 'show system info'
          ip_address: '{{ ansible_host }}'
          username: '{{ ansible_ssh_user }}'
