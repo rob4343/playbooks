@@ -1,7 +1,15 @@
 ---
 - name: Hello World Sample
   hosts: pa
-  collections: paloaltonetworks.panos
+  roles:
+  # Install a role from Ansible Galaxy.
+    - name: paloaltonetworks.panos
+      version: 2.6.0
+  collections:
+  # Install a collection from Ansible Galaxy.
+      - name: paloaltonetworks.panos
+        version: 2.6.0
+        source: https://galaxy.ansible.com
   tasks:
     - name: execute
       paloaltonetworks.panos.panos_op:
