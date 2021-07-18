@@ -1,9 +1,5 @@
 ---
 - hosts: pa
-  roles:
-     # Install a role from Ansible Galaxy.
-     - name: paloaltonetworks.panos
-       version: 2.6.0
   tasks:
     - name: execute
       paloaltonetworks.panos.panos_op:
