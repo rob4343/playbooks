@@ -1,8 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: pa
-  collections:
-    - paloaltonetworks.panos
+  collections: paloaltonetworks.panos
   tasks:
     - name: execute
       paloaltonetworks.panos.panos_op:
