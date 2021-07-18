@@ -1,0 +1,22 @@
+---
+- hosts: pa
+  roles:
+     # Install a role from Ansible Galaxy.
+     - name: paloaltonetworks.panos
+       version: 2.6.0
+  collections:
+     # Install a collection from Ansible Galaxy.
+       - name: paloaltonetworks.panos
+         version: 2.6.0
+         source: https://galaxy.ansible.com
+  tasks:
+    - name: execute
+      paloaltonetworks.panos.panos_op:
+         cmd: 'show system info'
+         ip_address: '{{ ansible_host }}'
+         username: '{{ ansible_ssh_user }}'
+         password: '{{ ansible_ssh_pass }}'
+      register: show 
+    - name: show
+      debug:
+        var: 'show.stdout'
