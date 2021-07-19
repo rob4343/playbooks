@@ -1,8 +1,0 @@
----
-- host: localhost
-  tasks:
-    - name: install 
-      easy_install:
-         name: pan-python
-         state: latest
-     
