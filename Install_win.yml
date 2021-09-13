@@ -5,7 +5,7 @@
       - name: Install vlc
         win_package:
           name: "Vlc Media Player"
-          path: C:\Users\Administrator\Documents\vlc-3.0.16-win32.exe
+          path: https://mirrors.estointernet.in/videolan/vlc/3.0.8/win64/vlc-3.0.8-win64.msi
           arguments: '/quiet /qn /le C:\VLCinstalllog.txt'
           product_id: "VLC media player"
           ensure: present
