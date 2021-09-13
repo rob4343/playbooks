@@ -1,0 +1,12 @@
+- name: Install
+  hosts: psedit
+  gather_facts: false
+  tasks:
+      - name: Install vlc
+        win_package:
+          name: "Vlc Media Player"
+          path: C:\Users\Administrator\Documents\vlc-3.0.16-win32.exe
+          arguments: '/quiet /qn /le C:\VLCinstalllog.txt'
+          product_id: "VLC media player"
+          ensure: present
+          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC'                  
