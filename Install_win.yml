@@ -5,7 +5,7 @@
       - name: Install vlc
         win_package:
          name: "Vlc Media Player"
-         path: C:\Users\Administrator\Documents\vlc-3.0.16-win32.exe
+         path:  https://mirrors.afghan-wireless.com/videolan/vlc/3.0.16/win64/vlc-3.0.16-win64.exe
          arguments: ' /S /le C:\VLCinstalllog.txt'
          product_id: VLC-media-player
          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'     
