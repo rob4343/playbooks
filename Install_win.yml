@@ -4,31 +4,13 @@
   tasks:
       - name: Install vlc
         win_package:
-          name: "Vlc Media Player"
-          path: https://mirrors.estointernet.in/videolan/vlc/3.0.8/win64/vlc-3.0.8-win64.msi
-          arguments: '/quiet /qn /le C:\VLCinstalllog.txt'
-          product_id: "VLC media player"
-          ensure: present
-          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC'     
-         
-- name: Install
-    hosts: psedit
-    gather_facts: false
-    tasks:
-      - name: Install vlc
-        win_package:
-          name: "Vlc Media Player"
-          path: C:\Users\Administrator\Documents\vlc-3.0.16-win32.exe
-          arguments: ' /S /le C:\VLCinstalllog.txt'
-          product_id: VLC-media-player
-          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'
-        tags:
-        - in
-
-- name: Install
-    hosts: psedit
-    gather_facts: false
-    tasks:
+         name: "Vlc Media Player"
+         path: C:\Users\Administrator\Documents\vlc-3.0.16-win32.exe
+         arguments: ' /S /le C:\VLCinstalllog.txt'
+         product_id: VLC-media-player
+         creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'     
+         e: Install
+    
       - name: Install vlc
         win_package: 
           name: "NotePad ++"
