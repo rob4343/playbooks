@@ -19,7 +19,7 @@
       - name: Install Quicktime Player
         win_package:
           path: https://secure-appldnld.apple.com/QuickTime/031-43075-20160107-C0844134-B3CD-11E5-B1C0-43CA8D551951/QuickTimeInstaller.exe
-          arguments: /S
+          arguments: /S /T
           product_id: Quicktime-Player
           creates_path: 'C:\Program Files (x86)\QuickTime\QuickTimePlayer.exe'
 
