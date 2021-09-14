@@ -9,4 +9,30 @@
           arguments: '/quiet /qn /le C:\VLCinstalllog.txt'
           product_id: "VLC media player"
           ensure: present
-          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC'                  
+          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC'     
+         
+- name: Install
+    hosts: psedit
+    gather_facts: false
+    tasks:
+      - name: Install vlc
+        win_package:
+          name: "Vlc Media Player"
+          path: C:\Users\Administrator\Documents\vlc-3.0.16-win32.exe
+          arguments: ' /S /le C:\VLCinstalllog.txt'
+          product_id: VLC-media-player
+          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'
+        tags:
+        - in
+
+- name: Install
+    hosts: psedit
+    gather_facts: false
+    tasks:
+      - name: Install vlc
+        win_package: 
+          name: "NotePad ++"
+          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          arguments: '/S'
+          product_id: notepad-plus-plus
+          creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
