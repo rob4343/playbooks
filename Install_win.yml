@@ -7,8 +7,7 @@
          path:  https://mirrors.afghan-wireless.com/videolan/vlc/3.0.16/win64/vlc-3.0.16-win64.exe
          arguments: /S
          product_id: VLC-media-player
-         creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'     
-         e: Install
+         creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'
     
       - name: Install Notepad++
         win_package: 
