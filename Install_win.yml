@@ -19,21 +19,21 @@
 
       - name: Install Quicktime Player
         win_package:
-          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          path: https://secure-appldnld.apple.com/QuickTime/031-43075-20160107-C0844134-B3CD-11E5-B1C0-43CA8D551951/QuickTimeInstaller.exe
           arguments: /S
-          product_id: notepad-plus-plus
+          product_id: Quicktime-Player
           creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
 
       - name: Install Media Info
         win_package:
-          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          path: https://mediaarea.net/download/binary/mediainfo-gui/21.03/MediaInfo_GUI_21.03_Windows.exe
           arguments: /S
-          product_id: notepad-plus-plus
+          product_id: Media-Info
           creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
 
       - name: Install Imageglass
         win_package:
-          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          path: https://imageglass.org/release/imageglass-8-2-6-6-june-56/download
           arguments: /S
-          product_id: notepad-plus-plus
+          product_id: Imageglass
           creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
