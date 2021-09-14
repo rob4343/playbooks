@@ -4,17 +4,36 @@
   tasks:
       - name: Install vlc
         win_package:
-         name: "Vlc Media Player"
          path:  https://mirrors.afghan-wireless.com/videolan/vlc/3.0.16/win64/vlc-3.0.16-win64.exe
-         arguments: ' /S /le C:\VLCinstalllog.txt'
+         arguments: /S
          product_id: VLC-media-player
          creates_path: 'C:\Program Files(x86)\VideoLAN\VLC\vlc.exe'     
          e: Install
     
-      - name: Install vlc
+      - name: Install Notepad++
         win_package: 
-          name: "NotePad ++"
           path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
-          arguments: '/S'
+          arguments: /S
+          product_id: notepad-plus-plus
+          creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
+
+      - name: Install Quicktime Player
+        win_package:
+          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          arguments: /S
+          product_id: notepad-plus-plus
+          creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
+
+      - name: Install Media Info
+        win_package:
+          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          arguments: /S
+          product_id: notepad-plus-plus
+          creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
+
+      - name: Install Imageglass
+        win_package:
+          path: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+          arguments: /S
           product_id: notepad-plus-plus
           creates_path: 'C:\Program Files (x86)\Notepad++\npp++.exe'
